@@ -4,9 +4,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const bcrypt = require("bcrypt");
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
+app.use(cors());
 
 
 app.use(express.static('public')); // using static files.
