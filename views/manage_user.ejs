@@ -1,0 +1,124 @@
+<!-- admin.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css" integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+<script src="https://kit.fontawesome.com/e6ff2956e2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+  <nav>
+    
+    <div class="navbar">
+        <a href="#" class="logo">W<B>_W.</b></a>
+
+    
+        <ul>
+           
+            <li><a id = "nav_home" href="/">home</a></li>
+            <li><a id = "nav_services" href="/services">services</a></li>
+            <li><a id = "nav_contact" href="/contact">contact</a></li>
+            <li><a id = "nav_Login" href="/login">Login</a></li>
+           
+
+        </ul>
+
+    </div>
+    
+  </nav>
+
+
+  <h1 class="services_heading">Admin Panel</h1>
+
+  <!-- Display entries -->
+  
+
+
+  <div class="contact_container">
+    <div class="contact_item">
+      <h2>Registered Users</h2>
+      
+    </div>
+    <div class="contact_item">
+      <div id="entries">
+        <% entries.forEach(entry => { %>
+          <p><strong>Email:</strong> <%= entry.username %> <strong> &nbsp;&nbsp; Phone:</strong> <%= entry.phone %></p>
+          
+        <% }); %>
+
+
+
+
+      </div>
+
+      <div class="contact_form">
+        <!-- Delete entry form -->
+       <form action="/admin/delete" method="post">
+        
+        <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        <button type="submit">Delete User</button>
+        </form>
+        <a href="/admin"><button>Back</button></a>
+
+
+          
+        
+          
+        
+        
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+
+  
+
+</body>
+<section class="footer">
+    <footer>
+    <div class="footer_container">
+      
+        <div class="footer_item ">
+          <p id="footer_logo">W<b>_W</b></p>
+        </div>
+        <div class="footer_item">
+          <p>&copy; 2023 Waterloo Workshop Inc.</p>
+          
+        </div>
+        <div class="footer_item">
+          
+          <img src="images/instagram.svg" alt="instagram">
+          <img src="images/twitter.svg" alt="twitter">
+          <img src="images/facebook.svg" alt="facebook">
+          <img src="images/youtube.svg" alt="youtube">
+  
+          
+        </div>
+        
+  
+      </footer>
+      
+    </div>
+  </section> 
+  
+</body>
+</html>
+
+</html>
